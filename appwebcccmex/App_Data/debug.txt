@@ -1,0 +1,9 @@
+
+Error: El proveedor 'Microsoft.ACE.OLEDB.12.0' no está registrado en el equipo local., fecha: 22/02/2017 02:09:54 p. m.
+Error: Subproceso anulado., fecha: 22/02/2017 02:14:33 p. m.
+Error: Login failed for user 'siscorpc_usrcccmex'.
+Error: Login failed for user 'siscorpc_usrcccmex'.
+Error: Login failed for user 'siscorpc_usrcccmex'.
+Error: Login failed for user 'admin'.
+Error: Login failed for user 'admin'.
+Error: Thread was being aborted., fecha: 2/6/2019 3:41:45 PM

@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>canvas</title>
+<script type="application/x-javascript">
+
+function saluda(){
+	alert("hola");
+}
+            function simpleCanvas() {
+ 			
+                /* Recuperamos el canvas */
+                var canvas = document.getElementById("miCanvas");
+ 
+                if (canvas.getContext) {
+ 
+                    /* Obtenemos el contexto plano (2d) */
+                    var ctx = canvas.getContext("2d");
+ 
+                    /* Establecemos el valor RGB del primer polígono */
+                    ctx.fillStyle = "rgb(41,155,243)";
+ 
+                    /* Con fillRect crearemos un rectangulo los numeros correscponden:  */
+                    /* los 2 primeros a las coordenadas y los otros tamaño (x,y,ancho,alto)  */
+ 
+ 
+                    ctx.fillRect (10, 10, 180, 180);
+ 
+ 
+                }
+            }
+			
+	function dibujarCanvas(){
+        var canvas = document.getElementById('miCanvas');
+        var contexto = canvas.getContext('2d');
+	      // imagen
+		var imagen = new Image();
+		imagen.onload = function(){
+			contexto.drawImage(imagen,0,0);  // imagen completa en la posición (0,0) 
+			//contexto.drawImage(imagen,285,0, 150,107); // escalado
+			//contexto.drawImage(imagen,130,85,80,60,285,205,150,107); // escalado de una porción
+			contexto.strokeStyle = 'green';
+			contexto.lineWidth = 5;
+       	contexto.strokeRect (120,120,80,60); // rectángulo amarillo
+		
+		 contexto.fillStyle = "rgb(255,0,0)";
+		 contexto.fillRect (560, 320, 40, 40);
+		 
+		 contexto.font = '24px "Tahoma"';
+		 contexto.fillText("Aviso Urgente", 560, 300);
+			
+		
+		 }
+		  imagen.src = 'diagrama1.png';
+	  }
+        </script>
+
+</head>
+
+<body onLoad="dibujarCanvas();">
+    <canvas id="miCanvas" width="900" height="500">
+        <p>Su navegador no soporta HTML5</p>
+        </canvas>
+</body>
+</html>

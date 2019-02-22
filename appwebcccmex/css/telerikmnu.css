@@ -1,0 +1,233 @@
+﻿/** Customize the demo canvas */
+
+@media \0screen\,screen\9 {
+    #example .demo-container {
+        border: 1px solid #ccc;
+    }
+} 
+ 
+/*header - Home*/
+.demo-container .headerHome {
+    display: block;
+}
+ 
+    /*Main menu*/
+    .demo-container .mainMenu {
+        text-transform: uppercase;
+        opacity: .8;
+    }
+ 
+    .demo-container .mainMenu .rmRootGroup .rmRootLink {
+        padding: 4px 20px;
+        line-height: 30px;
+        height: 100%;
+      
+    }
+ 
+    .demo-container .mainMenu .rmRootGroup .rmRootLink .rmToggle {
+        height: 30px;
+    }
+ 
+        /*Bootstrap skin*/
+        .demo-container .mainMenu.RadMenu_Bootstrap .rmRootGroup .rmRootLink {
+            padding: 15px;
+            line-height: 1.42857;
+            height: 1.42857em;
+        }
+        .demo-container .mainMenu.RadMenu_Bootstrap .rmRootGroup .rmRootLink .rmToggle {
+            height: 1.33em;
+        }
+ 
+        /*Material skin*/
+        .demo-container .mainMenu.RadMenu_Material .rmRootGroup .rmRootLink {
+            padding: 14px 24px;
+            line-height: 1.42857;
+            height: 1.42857em;
+        }
+        .demo-container .mainMenu.RadMenu_Material .rmRootGroup .rmRootLink .rmToggle {
+            height: 1.33em;
+        }
+         
+ 
+    .demo-container .rmLeftImage {
+        background-image: url('Images/icons.png') !important;
+    }
+ 
+    .demo-container .RadMenu_Outlook .icon-sofa:hover .rmLeftImage,
+    .demo-container .icon-sofa .rmLeftImage {
+        background-position: 0 0;
+    }
+ 
+    .demo-container .RadMenu_Outlook .icon-chair:hover .rmLeftImage,
+    .demo-container .icon-chair .rmLeftImage {
+        background-position: -20px 0;
+    }
+ 
+    .demo-container .RadMenu_Outlook .icon-table:hover .rmLeftImage,
+    .demo-container .icon-table .rmLeftImage {
+        background-position: -40px 0;
+    }
+ 
+        .demo-container .RadMenu_MetroTouch .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Metro .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Glow .icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Silk .icon-sofa:hover .rmLeftImage,
+        .demo-container .RadMenu_Silk .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Telerik .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Sunset .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Black .icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_BlackMetroTouch .icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Outlook .icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Outlook .rmSelected.icon-sofa .rmLeftImage,
+        .demo-container .RadMenu_Simple .icon-sofa:hover .rmLeftImage,
+        .demo-container .RadMenu_Simple .rmSelected.icon-sofa .rmLeftImage {
+            background-position: 0 -20px;
+        }
+ 
+        .demo-container .RadMenu_MetroTouch .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Metro .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Glow .icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Silk .icon-chair:hover .rmLeftImage,
+        .demo-container .RadMenu_Silk .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Telerik .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Sunset .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Black .icon-chair .rmLeftImage,
+        .demo-container .RadMenu_BlackMetroTouch .icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Outlook .icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Outlook .rmSelected.icon-chair .rmLeftImage,
+        .demo-container .RadMenu_Simple .icon-chair:hover .rmLeftImage,
+        .demo-container .RadMenu_Simple .rmSelected.icon-chair .rmLeftImage  {
+            background-position: -20px -20px;
+        }
+ 
+        .demo-container .RadMenu_MetroTouch .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Metro .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Glow .icon-table .rmLeftImage,
+        .demo-container .RadMenu_Silk .icon-table:hover .rmLeftImage,
+        .demo-container .RadMenu_Silk .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Telerik .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Sunset .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Black .icon-table .rmLeftImage,
+        .demo-container .RadMenu_BlackMetroTouch .icon-table .rmLeftImage,
+        .demo-container .RadMenu_Outlook .icon-table .rmLeftImage,
+        .demo-container .RadMenu_Outlook .rmSelected.icon-table .rmLeftImage,
+        .demo-container .RadMenu_Simple .icon-table:hover .rmLeftImage,
+        .demo-container .RadMenu_Simple .rmSelected.icon-table .rmLeftImage {
+            background-position: -40px -20px;
+        }
+ 
+/*page content*/
+.demo-container .pageContent {
+    height: 320px;
+    width: 730px;
+    position: relative;
+}
+.demo-container div.pageContent h6 {
+    margin: 5px 20px 0;
+    font-size: 25px;
+    color: #000;
+    padding-top:15px;
+}
+ 
+/*submenu*/
+.demo-container .pageContent .RadMenu,
+.demo-container .pageContent .RadMenu .rmRootGroup {
+    height: 100%;
+}
+ 
+/*home page*/
+.demo-container .homeContent {
+    height: 140px;
+    width: 670px;
+    padding: 20px 30px;
+    font-size: 18px;
+}
+ 
+html .demo-container .pageContent.homeContent h5 {
+    padding: 0 0 15px;
+    font-size: 28px;
+    color: #000;
+    border-bottom: 1px solid #2dabc1;
+}
+ 
+/*product page*/
+.demo-container .productContainer {
+    position: relative;
+    height: 210px;
+    width: 270px;
+    color: #2dabc1;
+    font-size: 14px;
+    line-height: 18px;
+    float: left;
+    margin: 35px 0 0 60px;
+}
+ 
+    .demo-container .describtion {
+        position: absolute;
+        bottom: 0;
+        left: 30px;
+        width: 208px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #2dabc1;
+    }
+ 
+    .demo-container .describtion span {
+        display: block;
+        overflow: hidden;
+    }
+    .demo-container .describtion .price {
+        height: 30px;
+        float: left;
+        font-size: 22px;
+        line-height: normal;
+        text-align:right;
+        
+    }
+    .demo-container .describtion .name,
+    .demo-container .describtion .type {
+        padding: 0 15px;
+    }
+    .demo-container .describtion .name {
+        padding-top: 7px;
+        font-weight: bold;
+    }
+ 
+    /*chairs*/
+    .demo-container .chairs img {
+        margin: -30px 0 0 20px;
+    }
+ 
+/*stores page*/
+.demo-container #stores .address {
+    float: left;
+    margin: 30px 35px;
+}
+.demo-container #stores p {
+    margin: 0;
+}
+ 
+/*about us page*/
+.demo-container .about {
+    width: 690px;
+    padding: 0 20px;
+}
+.demo-container .people {
+    width: 33%;
+    float: left;
+    margin: 25px 0 0;
+    color: #2dabc1;
+    font-size: 16px;
+    text-align: center;
+}
+.demo-container .people img {
+    display: block;
+    margin: auto;
+}
+ 
+.demo-container .people p {
+    margin: 0;
+}
+.demo-container .people .name {
+    font-weight: bold;
+    border-top: 1px solid #2dabc1;
+}

@@ -1,0 +1,171 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="caminPage.master.cs" Inherits="appwebcccmex.caminPage" %>
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta content="Camin Cargo Control México, Coatzacoalcos, ver." name="description" />
+    <title>Camin Cargo Control México</title>
+    <link rel="shortcut icon" href="images/logo_ad.png" type="image/x-icon" />
+    <link rel="icon" href="images/logo_ad.png" type="image/x-icon" />
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/full-slider.css" rel="stylesheet" />
+    <link rel="stylesheet" href="vendors/iconfonts/mdi/css/materialdesignicons.min.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css" />
+    <link rel="stylesheet" href="vendors/css/vendor.bundle.addons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/telerikmnu.css" />
+    <style type="text/css">
+        .scrollable {
+            height: 550px;
+            overflow-y: scroll;
+        }
+
+        .customClass.RadMenu .rmHorizontal .rmText {
+            padding-left: 10px !important;
+            font-size: 18px !important;
+            text-align: left;
+            padding-top: 8px;
+            height: 39px;
+            width: 100%;
+        }
+
+        .fixedContainer {
+            background-color: #ddd;
+            position: fixed;
+            padding: 2em;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+
+<body>
+    <div class="container-scroller ">
+        <form runat="server">
+
+            <nav class="default-layoutp-0 fixed-top d-flex flex-row" style=" background:#ffffff;">
+
+                <telerik:RadScriptManager ID="RadScriptManager1" runat="server" />
+                <telerik:RadMenu RenderMode="Lightweight" Skin="Material" ID="RadMenu1" runat="server" ClickToOpen="true" Flow="Horizontal" CssClass="customClass" Font-Size="18px">
+                    <Items>
+                        <telerik:RadMenuItem Text="Camin Cargo Control" Enabled="false"></telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Catalogo" Value="CATALOGOS">
+                            <Items>
+                                <telerik:RadMenuItem Text="Centro" NavigateUrl="~/catalogos/centrospag.aspx" Value="In8" EnableImageSprite="true" ImageUrl="images/centros.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Producto" NavigateUrl="~/catalogos/products.aspx" Value="Mu9" EnableImageSprite="true" ImageUrl="images/producto.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Servicios" NavigateUrl="~/catalogos/services.aspx" Value="In80" EnableImageSprite="true" ImageUrl="images/servicio.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Barco" NavigateUrl="~/catalogos/boats.aspx" Value="ps1" EnableImageSprite="true" ImageUrl="images/barco.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Orden de Servicio" NavigateUrl="~/catalogos/OrderServices.aspx" Value="Mu9" EnableImageSprite="true" ImageUrl="images/producto.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Equipo" NavigateUrl="~/Teams.aspx" Value="In80" EnableImageSprite="true" ImageUrl="images/producto.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Eventos" Visible="false" NavigateUrl="~/Events.aspx" Value="ps1" EnableImageSprite="true" ImageUrl="~/Images/sindicato.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Linea Transporte" Visible="false" NavigateUrl="~/transportline.aspx" Value="lt1" EnableImageSprite="true" ImageUrl="~/Images/servicio.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Tipo Equipo" Visible="false" NavigateUrl="~/teamtype.aspx" Value="tt1" EnableImageSprite="true" ImageUrl="~/Images/servicio.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Zona" Visible="false" NavigateUrl="~/Zone.aspx" Value="zo1" EnableImageSprite="true" ImageUrl="~/Images/servicio.png"></telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Operaciones" Value="OPERACIONES">
+                            <Items>
+                                <telerik:RadMenuItem ImageUrl="~/Images/zonafederal.png" Text="Captura" Value="CAPTURA">
+                                    <Items>
+                                        <telerik:RadMenuItem ImageUrl="~/Images/zonafederal.png" Text="Centros de trabajo" Value="Zo10" NavigateUrl="~/capturebycenter.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem ImageUrl="~/Images/zonafederal.png" Text="Laboratorio" Value="Zo11" NavigateUrl="~/capturebylaboratory.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                        <telerik:RadMenuItem ImageUrl="~/Images/zonafederal.png" Text="Situación Operativa" Value="Zo12" NavigateUrl="~/operationsituation.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                    </Items>
+                                </telerik:RadMenuItem>
+                                <telerik:RadMenuItem ImageUrl="~/Images/bebidasalcoholicas.png" Text="Diagramas" Value="DIAGRAMA">
+                                    <Items>
+                                        <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="Diagrama centros" Value="pcom21" NavigateUrl="~/Diagrams.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                    </Items>
+                                </telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Turbosina" Value="TURNBOSINA">
+                            <Items>
+                                <telerik:RadMenuItem Text="Certificación y Calidad" NavigateUrl="utilerias/calculapredialpag.aspx" Value="Ca28" EnableImageSprite="true" ImageUrl="~/Images/consultadeadeudospredial.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Línea de Transporte" NavigateUrl="utilerias/editaadeudospredialpag.aspx" Value="Co31" EnableImageSprite="true" ImageUrl="~/Images/consultatablasyadeudos.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Muelles" NavigateUrl="utilerias/editaReciboByPolizaPag.aspx" Value="Co32" EnableImageSprite="true" ImageUrl="~/Images/consultatablasyadeudos.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Tipo Equipo" NavigateUrl="utilerias/editaSesionByUsuariopag.aspx" Value="Co33" EnableImageSprite="true" ImageUrl="~/Images/consultatablasyadeudos.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Buque Tanque" NavigateUrl="utilerias/CalculoFactorActualizacionZonaFederalPag.aspx" Value="Co34" EnableImageSprite="true" ImageUrl="~/Images/consultatablasyadeudos.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Gráficas" NavigateUrl="utilerias/Actualizaciones.aspx" Value="act1" EnableImageSprite="true" ImageUrl="~/Images/consultadeadeudospredial.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Consultas" NavigateUrl="utilerias/LeyendaRecibo.aspx" Value="Lr1" EnableImageSprite="true" ImageUrl="~/Images/consultadeadeudospredial.png"></telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Consultas" Value="CONSULTAS">
+                            <Items>
+                                <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="Centros" Value="BeGi21" NavigateUrl="~/adminbycenter.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="SubGerencia" Value="PaAlch22" NavigateUrl="~/submanagementpemex.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="Acumulados" Value="PaAlch22" NavigateUrl="~/accumulated.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="Situación Operativa" Value="PaAlch22" NavigateUrl="~/export_operationsituacion.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem ImageUrl="~/Images/girosadd.png" Text="Acumulado Orden Servicio" Value="PaAlch22" NavigateUrl="~/accumulatedbyorder.aspx" EnableImageSprite="true" CssClass="icon-chair"></telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Seguridad" Value="SEGURIDAD">
+                            <Items>
+                                <telerik:RadMenuItem Text="Usuarios" NavigateUrl="~/catalogos/usermanagement.aspx" Value="Cu22" EnableImageSprite="true" ImageUrl="~/Images/catalogodecuentascontables.png"></telerik:RadMenuItem>
+                                <telerik:RadMenuItem Text="Contraseña" NavigateUrl="~/Account/changepassword.aspx" Value="Ca22" EnableImageSprite="true" ImageUrl="~/Images/catalogodepagosvarios.png"></telerik:RadMenuItem>
+                            </Items>
+                        </telerik:RadMenuItem>
+                        <telerik:RadMenuItem Text="Login" Value="INI_LOGIN" NavigateUrl="Account/MigratedLogin.aspx" />
+                        <telerik:RadMenuItem Text="Cerrar sesion" NavigateUrl="account/outSession.aspx" Value="INIMENU" />
+                    </Items>
+                </telerik:RadMenu>
+            </nav>
+
+
+            <div class="main-panel container-fluid page-body-wrapper">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                </asp:ContentPlaceHolder>
+                <%--  <img src="Images/bannerbottom.png" class="img-fluid img-responsive" style="margin-top:0px;" alt="Camin Cargo..."/>--%>
+
+                <footer class="footer">
+                    <div class="container-fluid clearfix">
+                        <span class="text-muted d-block text-center text-sm-left d-sm-inline-block">Copyright © 2019
+                             <a href="http://www.cccmexctz.com.mx/" target="_blank">Camin Cargo Control México.</a>. All rights reserved.</span>
+                        <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Mezda Consultoria
+                            <i class="mdi mdi-heart text-danger"></i>
+                        </span>
+                    </div>
+                </footer>
+                <!-- partial -->
+            </div>
+        </form>
+
+
+    </div>
+    <!-- container-scroller -->
+    <!-- plugins:js -->
+    <script src="vendors/js/vendor.bundle.base.js"></script>
+    <script src="vendors/js/vendor.bundle.addons.js"></script>
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page-->
+    <!-- End plugin js for this page-->
+    <!-- inject:js -->
+    <script src="js/off-canvas.js"></script>
+    <script src="js/misc.js"></script>
+
+    <!-- endinject -->
+    <!-- Custom js for this page-->
+    <!-- End custom js for this page-->
+</body>
+
+</html>
+<!-- partial:../../partials/_navbar.html -->
+
+
+<%--  <div class="text-center navbar-brand-wrapper d-flex align-items-top justify-content-center" style="width:10%;">     
+              <a class="brand-logo" href="predial.aspx" title="Generar linea de pago">
+          <img src="images/aguadulce_escudoylogo.png" alt="H. Ayuntamiento Agua Dulce, Ver." class="img-fluid rounded float-left"/>          
+     </a>
+        <a class="navbar-brand brand-logo-mini" href="predial.aspx" title="Generar linea de pago">
+          <img src="images/logo-mini.png" alt="H. Ayuntamiento Agua Dulce, Ver." class="img-fluid rounded float-left"/>
+        </a>
+      </div>--%>
